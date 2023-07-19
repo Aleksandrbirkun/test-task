@@ -8,6 +8,7 @@ function App() {
     const [checked, setChecked] = useState(false)
     const LABEL = 'Flood zone 3'
 
+
     return (
         <div className="App">
             <Card checked={checked} onChange={setChecked} label={LABEL}/>

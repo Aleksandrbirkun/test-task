@@ -2,13 +2,17 @@ import { Card } from './'
 
 export default {
     title: 'Card',
-    component: <Card/>,
-    tags: ["autodocs"]
+    component: Card,
+    tags: ["autodocs"],
+    argTypes: {
+        checked: { control: 'boolean' },
+        onChange: { action: 'onChange' },
+        label: { control: 'text' },
+    },
 }
 
 export const Default = {
     args: {
-        checked: true,
-        onChange: (checked: boolean) => {}
+        label: 'Flood zone 3'
     }
 }

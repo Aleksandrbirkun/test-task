@@ -15,9 +15,9 @@ type CardProps = {
 }
 
 export const Card: FC<CardProps> = memo(({ checked, onChange, label }) => {
-    const changeChackedHandle = useCallback(() => onChange(() => !checked), [checked])
+    const changeChackedHandle = useCallback(() => onChange(!checked), [checked])
 
-    const Item = styled(Paper)(({ theme }) => ({
+    const Item = styled(Paper)(() => ({
         backgroundColor: '#fff',
         overflow: 'hidden',
         textAlign: 'center',
@@ -30,12 +30,12 @@ export const Card: FC<CardProps> = memo(({ checked, onChange, label }) => {
 
     }));
 
-    const Img = styled("img")(({ theme }) => ({
+    const Img = styled("img")(() => ({
         height: '100px',
         objectFit: 'cover'
     }));
 
-    const TextBox = styled("div")(({ theme }) => ({
+    const TextBox = styled("div")(() => ({
         boxSizing: 'border-box',
         display: 'flex',
         justifyContent: 'flex-start',
