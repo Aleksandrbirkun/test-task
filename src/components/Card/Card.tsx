@@ -15,7 +15,7 @@ type CardProps = {
 }
 
 export const Card: FC<CardProps> = memo(({ checked, onChange, label }) => {
-    const changeChackedHandle = useCallback(() => onChange(!checked), [checked])
+    const changeCheckedHandle = useCallback(() => onChange(!checked), [checked])
 
     const Item = styled(Paper)(() => ({
         backgroundColor: '#fff',
@@ -76,10 +76,8 @@ export const Card: FC<CardProps> = memo(({ checked, onChange, label }) => {
                             }}
                             size='small'
                             checked={checked}
-                            onClick={changeChackedHandle}/>}
+                            onClick={changeCheckedHandle}/>}
                         label={label}/>
-                    {/*<Checkbox sx={{ width: "18px", height: "18px" }} defaultChecked/>*/}
-                    {/*<Text>{TEXT}</Text>*/}
                 </TextBox>
             </Item>
         </Stack>
