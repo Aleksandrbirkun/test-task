@@ -63,7 +63,7 @@ const FoodZone = styled("div")(() => ({
     marginTop: "10px ",
     fontFamily: "Plus Jakarta Sans, sans-serif",
     fontSize: "14px"
-}));
+}))
 
 export const Card = () => {
     const [isChecked, setIsChecked] = useState(false)
